@@ -20,5 +20,15 @@
         <a class="btn btn-outline-info mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
         {%endif%}
     {% endfor %}
+    <section id="jssection">
 
+    </section>
 {% endblock content %}
+{% block scripts %}
+    <script type="module">        
+        import {default as printPosts} from "{{url_for('static',filename='main.js')}}"
+        let posts = JSON.parse('{{json|tojson}}')
+
+        printPosts(posts)        
+    </script>
+{% endblock scripts %}

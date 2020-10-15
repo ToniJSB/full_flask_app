@@ -56,7 +56,8 @@
                     {%endfor%}
                 {% endif %}
             {% endwith %}
-            {% block content %}{% endblock %}
+            {% block content %}{% endblock content %}
+            {% block scripts %}{% endblock scripts%}
         </div>
         <div class="col-md-4">
           <div class="content-section">
