@@ -1,0 +1,143 @@
+# Spanish (Spain) translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-10-16 09:43+0200\n"
+"PO-Revision-Date: 2020-10-16 11:32+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es_ES\n"
+"Language-Team: es_ES <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: flaskblog/posts/forms.py:7
+msgid "Title"
+msgstr "Titulo"
+
+#: flaskblog/posts/forms.py:8
+msgid "Content"
+msgstr "Contenido"
+
+#: flaskblog/posts/forms.py:9
+msgid "Create"
+msgstr "Crear"
+
+#: flaskblog/posts/routes.py:20
+msgid "your post has been created!"
+msgstr "Tu post ha sido creado"
+
+#: flaskblog/posts/routes.py:42
+msgid "your post has been updated!"
+msgstr "Tu post ha sido actualizado"
+
+#: flaskblog/posts/routes.py:49
+msgid "Update Post"
+msgstr "Actualizar el post"
+
+#: flaskblog/posts/routes.py:49
+msgid "Update post"
+msgstr "Actualizar el post"
+
+#: flaskblog/posts/routes.py:59
+msgid "Your post has been deleted!"
+msgstr ""
+
+#: flaskblog/users/forms.py:10
+msgid "Usuario"
+msgstr "Usuario"
+
+#: flaskblog/users/forms.py:11 flaskblog/users/forms.py:27
+#: flaskblog/users/forms.py:34 flaskblog/users/forms.py:52
+msgid "Email"
+msgstr "Correo electronico"
+
+#: flaskblog/users/forms.py:12 flaskblog/users/forms.py:28
+#: flaskblog/users/forms.py:63
+msgid "Password"
+msgstr "contraseña"
+
+#: flaskblog/users/forms.py:13 flaskblog/users/forms.py:64
+msgid "Confirm Password"
+msgstr "Confirma la contraseña"
+
+#: flaskblog/users/forms.py:14
+msgid "Sign up"
+msgstr "Registrarse"
+
+#: flaskblog/users/forms.py:19 flaskblog/users/forms.py:42
+msgid "this username is taken. You must choose a different one"
+msgstr "Ese usuario está registrado"
+
+#: flaskblog/users/forms.py:24 flaskblog/users/forms.py:49
+msgid "this email is taken. You must choose a different one"
+msgstr "Este correo está registrado"
+
+#: flaskblog/users/forms.py:29
+msgid "Remember me"
+msgstr "Recordarme"
+
+#: flaskblog/users/forms.py:30
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: flaskblog/users/forms.py:33
+msgid "Username"
+msgstr "Usuario"
+
+#: flaskblog/users/forms.py:35
+msgid "Update Profile Picture"
+msgstr "Actualizar la foto de perfil"
+
+#: flaskblog/users/forms.py:36
+msgid "Update"
+msgstr "Actualizar"
+
+#: flaskblog/users/forms.py:54
+msgid "Request Password Reset"
+msgstr ""
+
+#: flaskblog/users/forms.py:59
+msgid "There is no account with that email. You must register first."
+msgstr "No hay ninguna cuenta con ese correo. debes registrarlo primero"
+
+#: flaskblog/users/forms.py:65
+msgid "Reset Password"
+msgstr "Reiniciar la contraseña"
+
+#: flaskblog/users/routes.py:22
+#, python-format
+msgid " account created for %(user)%!"
+msgstr "cuenta creada para %()user%"
+
+#: flaskblog/users/routes.py:36
+msgid "you have been loged in!"
+msgstr "Has iniciado sesión!"
+
+#: flaskblog/users/routes.py:42
+msgid "login unsuccessful"
+msgstr "inicio de sesión fallido"
+
+#: flaskblog/users/routes.py:61
+msgid "Your account has been updated!"
+msgstr "Tu cuenta ha sido actualizada!"
+
+#: flaskblog/users/routes.py:85
+msgid "An email has been sent with instructions to reset your password."
+msgstr ""
+
+#: flaskblog/users/routes.py:96
+msgid "That is an invalid or expired token"
+msgstr ""
+
+#: flaskblog/users/routes.py:103
+msgid "Your password has been updated! You are now able to log in"
+msgstr "Tu contraseña ha sido actualzada. Te está permitido inciar sesión"
+

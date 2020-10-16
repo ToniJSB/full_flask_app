@@ -1,5 +1,6 @@
 from flask import render_template, request, Blueprint, json
 from flaskblog.models import Post
+from flask import current_app
 
 
 main = Blueprint('main',__name__)
@@ -13,8 +14,12 @@ def home():
     js = []
     for post in postsJson:
         js.append(post.to_dict())
+    languages = current_app.config['LANGUAGES']
+    locale = list(languages)[0]
     
-    return render_template('home.html', posts = posts, json = js, title = 'home')
+
+        
+    return render_template('home.html', posts = posts, json = js, title = 'home', languages=languages, locale=locale)
 
 @main.route('/about')
 def about():
