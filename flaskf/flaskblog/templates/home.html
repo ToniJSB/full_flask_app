@@ -25,10 +25,29 @@
     </section>
 {% endblock content %}
 {% block scripts %}
+    {% raw %}
+    <div id="app">
+            <articulo-post v-for='post in posts' v-bind:post='post' v-bind:key='post.id'>
+            </articulo-post>
+    </div>
+    {% endraw %}
     <script type="module">        
         import {default as printPosts} from "{{url_for('static',filename='main.js')}}"
         let posts = JSON.parse('{{json|tojson}}')
 
         printPosts(posts)        
+    </script>
+    <script type="module">
+        import {articuloP} from "{{url_for('static', filename='vue/components/article.js')}}"
+
+        export var app = new Vue({
+            el: '#app',
+            components:{
+                'articulo-post':articuloP
+            },
+            data: {
+                posts: JSON.parse('{{json|tojson}}')
+            }
+        })
     </script>
 {% endblock scripts %}
