@@ -1,7 +1,7 @@
 from flask import render_template, request, Blueprint, json
 from flaskblog.models import Post
 from flask import current_app
-from flask_babel import gettext
+from flask_babel import _, lazy_gettext as _l
 
 
 main = Blueprint('main',__name__)
@@ -20,7 +20,7 @@ def home():
     
 
         
-    return render_template('home.html', posts = posts, json = js, title = 'home', languages=languages, locale=locale)
+    return render_template('home.html', posts = posts, json = js, title = 'home', languages=languages, locale=locale, _l = _l)
 
 @main.route('/about')
 def about():

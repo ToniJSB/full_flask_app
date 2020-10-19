@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flaskblog import db
 from flaskblog.models import Post
 from flaskblog.posts.forms import PostForm
-from flask_babel import gettext
+from flask_babel import _, lazy_gettext as _l
 
 posts = Blueprint('posts',__name__)
 
@@ -20,9 +20,9 @@ def new_post():
         db.session.add(post)
         db.session.commit()
 
-        flash(gettext(u'your post has been created!'), 'success')
+        flash(_('your post has been created!'), 'success')
         return redirect(url_for('main.home'))
-    return render_template('create_post.html', title='New Post', form=form, legend='New post', languages=languages, locale=locale)
+    return render_template('create_post.html', title='New Post', form=form, legend='New post', languages=languages, locale=locale, _l = _l)
 
 
 @posts.route('/post/<int:post_id>', methods=['GET','POST'])
@@ -30,7 +30,7 @@ def post(post_id):
     languages = current_app.config['LANGUAGES']
     locale = list(languages)[0]
     post = Post.query.get_or_404(post_id)
-    return render_template('post.html', title=post.title, post=post, languages=languages, locale=locale)
+    return render_template('post.html', title=post.title, post=post, languages=languages, locale=locale, _l = _l)
 
 
 @posts.route('/post/<int:post_id>/update', methods=['GET','POST'])
@@ -46,14 +46,14 @@ def update_post(post_id):
         post.title =form.title.data
         post.content =form.content.data 
         db.session.commit()
-        flash(gettext(u'your post has been updated!'),'success')
+        flash(_('your post has been updated!'),'success')
         return redirect(url_for('posts.post', post_id=post.id))
     elif request.method == 'GET':
         form.title.data = post.title
         form.content.data = post.content
 
         
-    return render_template('create_post.html', title=gettext(u'Update Post'), form=form, legend=gettext(u'Update post'),languages=languages, locale=locale)
+    return render_template('create_post.html', title=_('Update Post'), form=form, legend=_('Update post'),languages=languages, locale=locale, _l = _l)
 
 @posts.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
@@ -64,5 +64,5 @@ def delete_post(post_id):
         abort(403)
     db.session.delete(post)
     db.session.commit()
-    flash(gettext(u'Your post has been deleted!'), 'success')
+    flash(_('Your post has been deleted!'), 'success')
     return redirect(url_for('main.home'))

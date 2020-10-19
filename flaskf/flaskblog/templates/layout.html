@@ -27,18 +27,18 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{{url_for('main.home')}}">{{gettext('Home')}}</a>
-              <a class="nav-item nav-link" href="{{url_for('main.about')}}">{{gettext('About')}}</a>
+              <a class="nav-item nav-link" href="{{url_for('main.home')}}">{{_l('Home')}}</a>
+              <a class="nav-item nav-link" href="{{url_for('main.about')}}">{{_l('About')}}</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if current_user.is_authenticated %}
-              <a class="nav-item nav-link" href="{{url_for('posts.new_post')}}">{{gettext('New Post')}}</a>
-              <a class="nav-item nav-link" href="{{url_for('users.logout')}}">{{gettext('Logout')}}</a>
-              <a class="nav-item nav-link" href="{{url_for('users.account')}}">{{gettext('Account')}}</a>
+              <a class="nav-item nav-link" href="{{url_for('posts.new_post')}}">{{_l('New Post')}}</a>
+              <a class="nav-item nav-link" href="{{url_for('users.logout')}}">{{_l('Logout')}}</a>
+              <a class="nav-item nav-link" href="{{url_for('users.account')}}">{{_l('Account')}}</a>
               {% else %}
-                <a class="nav-item nav-link" href="{{url_for('users.login')}}">{{gettext('Login')}}</a>
-                <a class="nav-item nav-link" href="{{url_for('users.register')}}">{{gettext('Register')}}</a>
+                <a class="nav-item nav-link" href="{{url_for('users.login')}}">{{_l('Login')}}</a>
+                <a class="nav-item nav-link" href="{{url_for('users.register')}}">{{_l('Register')}}</a>
               {% endif %}
             </div>
               <li class="dropdown">
